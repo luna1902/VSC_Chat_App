@@ -1,0 +1,225 @@
+<!-- Update all <img> tags for icons to use Tailwind's filter and color utility -->
+<!-- Add 'filter invert brightness-75' to each icon image for #717171 color approximation -->
+
+<!-- Example for one icon: -->
+<img src="menu.png" alt="Menu" class="h-6 filter invert brightness-[0.44]">
+
+<!-- Full changes below: -->
+
+<html>
+  <head>
+    <title>My Web Page</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#262626]">
+    <nav class="flex justify-between items-center px-6 py-4 bg-[#0f0f0f]">
+      <!-- Left: 6 equal parts -->
+      <div class="flex flex-1 space-x-0.5">
+        <div class="flex flex-1 space-x-0.5">
+          <div class="text-left flex items-center">
+            <img
+              src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
+              alt="LeetCode Logo"
+              class="h-6 filter invert brightness-[0.44]"
+            />
+          </div>
+          <div class="text-left flex items-center">
+            <img src="menu.png" alt="Menu" class="h-6 filter invert brightness-[0.44]" />
+          </div>
+          <div class="text-left flex items-center text-white">Daily Question</div>
+          <div class="text-left flex items-center">
+            <img
+              src="211686_back_arrow_icon.png"
+              alt="Left Arrow"
+              class="h-6 filter invert brightness-[0.44]"
+            />
+          </div>
+          <div class="text-left flex items-center">
+            <img
+              src="211688_forward_arrow_icon.png"
+              alt="Right Arrow"
+              class="h-6 filter invert brightness-[0.44]"
+            />
+          </div>
+          <div class="text-left flex items-center">
+            <img
+              src="9022734_shuffle_duotone_icon.png"
+              alt="Shuffle"
+              class="h-6 filter invert brightness-[0.44]"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Center -->
+      <div class="flex-1 text-center">
+        <img
+          src="290138_document_extension_file_format_paper_icon.png"
+          alt=""
+          class="w-6 h-6 mx-auto filter invert brightness-[0.44]"
+        />
+      </div>
+      <!-- Right -->
+      <div class="flex-1 space-x-6 flex justify-end items-center">
+        <div class="flex items-center">
+          <img
+            src="9025048_windows_logo_light_icon.png"
+            alt="Window"
+            class="h-6 filter invert brightness-[0.44]"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="1564529_mechanism_options_settings_configuration_setting_icon.png"
+            alt="Setting"
+            class="h-6 filter invert brightness-[0.44]"
+          />
+        </div>
+        <div class="flex items-center">
+          <img src="8680118_fire_line_icon.png" alt="Fire" class="h-6 filter invert brightness-[0.44]" />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="4843025_clock_sports_stopwatch_timer_watch_icon.png"
+            alt="Timer"
+            class="h-6 filter invert brightness-[0.44]"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="5402435_account_profile_user_avatar_man_icon.png"
+            alt="Profile"
+            class="h-6 rounded-full filter invert brightness-[0.44]"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- Main window below nav -->
+    <div class="flex h-[calc(100vh-80px)] px-6 py-4 gap-6">
+      <!-- Left div: full height, rounded-lg -->
+      <div class="flex-1 bg-[#262626] rounded-lg shadow flex flex-col">
+        <!-- Tabs nav -->
+        <nav class="flex mb-4 bg-[#333333] rounded-lg w-full">
+          <button
+            class="py-1 px-2 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition"
+          >
+            Description
+          </button>
+          <button
+            class="py-1 px-4 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition ml-2"
+          >
+            Editorial
+          </button>
+          <button
+            class="py-1 px-4 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition ml-2"
+          >
+            Solutions
+          </button>
+          <button
+            class="py-1 px-4 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition ml-2"
+          >
+            Submissions
+          </button>
+        </nav>
+        <div class="p-4">
+        <h2 class="text-2xl font-bold text-gray-100">3408. Design Task Manager</h2>
+        <p class="text-gray-300">
+          There is a task management system that allows users to manage their
+          tasks, each associated with a priority. The system should efficiently
+          handle adding, modifying, executing, and removing tasks.
+          <br/>
+          <br/>
+           Implement the
+          TaskManager class:
+        </p>
+        <p class="text-gray-300">
+            TaskManager(vector<vector<int>>& tasks) initializes the task manager with a list of user-task-priority triples. Each element in the input list is of the form [userId, taskId, priority], which adds a task to the specified user with the given priority.
+            <br/>
+            void add(int userId, int taskId, int priority) adds a task with the specified taskId and priority to the user with userId. It is guaranteed that taskId does not exist in the system.
+            <br/>
+            void edit(int taskId, int newPriority) updates the priority of the existing taskId to newPriority. It is guaranteed that taskId exists in the system.
+            <br/>
+            void rmv(int taskId) removes the task identified by taskId from the system. It is guaranteed that taskId exists in the system.
+            <br/>
+            int execTop() executes the task with the highest priority across all users. If there are multiple tasks with the same highest priority, execute the one with the highest taskId. After executing, the taskId is removed from the system. Return the userId associated with the executed task. If no tasks are available, return -1.
+            <br/>
+            Note that a user may be assigned multiple tasks.
+        </p>
+
+</div>
+      </div>
+      <!-- Right div: split into 2, rounded-lg -->
+      <div class="flex flex-col flex-1 gap-6">
+        <div class="flex-1 bg-[#262626] rounded-lg shadow">
+  <nav class="flex mb-4 bg-[#333333] rounded-lg w-full">
+    <button
+      class="py-1 px-2 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition"
+    >
+      Code
+    </button>
+  </nav>
+  <div class="p-4">
+    <pre class="bg-[#1a1a1a] rounded-lg text-gray-200 text-sm overflow-x-auto p-4"><code>
+class TaskManager {
+public:
+    TaskManager(vector<vector<int>>& tasks) {
+        
+    }
+    
+    void add(int userId, int taskId, int priority) {
+        
+    }
+    
+    void edit(int taskId, int newPriority) {
+        
+    }
+    
+    </code></pre>
+  </div>
+</div>
+        <div class="flex-1 bg-[#262626] rounded-lg shadow">
+  <nav class="flex mb-4 bg-[#333333] rounded-lg w-full">
+    <button
+      class="py-1 px-2 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition"
+    >
+      Test case
+    </button>
+    <button
+      class="py-1 px-2 rounded-lg text-gray-200 font-semibold hover:bg-gray-700 transition"
+    >
+      Result
+    </button>
+  </nav>
+  <div class="flex flex-col h-full">
+  <!-- Chat messages area -->
+  <div id="chat-messages" class="h-48 overflow-y-auto p-2 space-y-2 bg-[#1a1a1a] rounded-lg font-mono text-gray-200 text-sm">
+    <!-- Initial code-style message -->
+    <div class="flex justify-start">
+      <pre class="whitespace-pre-wrap">Welcome to the TaskManager chat!</pre>
+    </div>
+  </div>
+
+  <!-- Input area -->
+  <div class="flex items-center space-x-2 mt-2">
+    <input
+      id="chat-input"
+      type="text"
+      placeholder="Type your message..."
+      class="flex-1 px-3 py-2 rounded-lg bg-[#333333] text-gray-200 placeholder-gray-500 font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      id="send-btn"
+      class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition font-mono"
+    >
+      Send
+    </button>
+  </div>
+</div>
+
+
+<script src="chat.js"></script>
+
+      </div>
+    </div>
+  </body>
+</html>
